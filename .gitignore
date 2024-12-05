@@ -3,3 +3,5 @@ node_modules
 input.js
 input.ts
 output
+package.json
+package-lock.json
