@@ -1,4 +1,4 @@
-//import { testData, day6Input } from './input';
+import { testData, realData } from "../in-progress/input.ts";
 
 const locateStartingPos = (data: string[]) => {
     for (let i = 0; i < data.length; i++) {
@@ -103,8 +103,8 @@ const executePart2 = (data: string[]) => {
     return loopCount;
 }
 const run6 = () => {
-    let part1Answer = executePart1([]);
-    let part2Answer = executePart2([]);
+    let part1Answer = executePart1(realData);
+    let part2Answer = executePart2(realData);
     console.log(`The count is ${part1Answer}.`);
     console.log(`The count is ${part2Answer}.`);
 }

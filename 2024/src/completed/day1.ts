@@ -1,12 +1,10 @@
-import { day1Inputs } from "./input";
-
-const sortList = (a: number, b: number) => a < b ? -1 : 1;
+import { testData, realData } from "../in-progress/input.ts";
 
 const createLists = () => {
     let left: number[] = [];
     let right: number[] = [];
-    for (let i = 0; i < day1Inputs.length; i++) {
-        const split = day1Inputs[i].split(",").map(x => parseInt(x));
+    for (let i = 0; i < realData.length; i++) {
+        const split = realData[i].split(",").map(x => parseInt(x));
         left.push(split[0]);
         right.push(split[1]);
     }

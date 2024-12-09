@@ -1,4 +1,4 @@
-//import { testData, day4Inputs, alternateInput } from "./input";
+import { testData, realData } from "../in-progress/input.ts";
 
 const getDirection = (direction: number) => {
     return [
@@ -60,8 +60,8 @@ const part2Execution = (data: string[]) => {
 }
 
 const run4 = () => {
-    part1Execution([""]);
-    part2Execution([""]);
+    part1Execution(realData);
+    part2Execution(realData);
 }
 
 run4();

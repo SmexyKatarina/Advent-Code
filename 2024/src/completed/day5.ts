@@ -1,3 +1,5 @@
+import { testData, realData } from "../in-progress/input.ts";
+
 const separateData = (data: string[]) => {
     let leftRules: number[] = [];
     let rightRules: number[] = [];
@@ -104,7 +106,7 @@ const sortOrder = (leftRules: number[], rightRules: number[], order: number[]) =
     return [];
 };
 const run5 = () => {
-    const { leftRules, rightRules, pageOrders } = separateData([]);
+    const { leftRules, rightRules, pageOrders } = separateData(realData);
     let sums = { correct: 0, incorrect: 0 };
     const { correct, incorrect } = getOrders(leftRules, rightRules, pageOrders);
     sums.correct = partA(leftRules, rightRules, pageOrders);

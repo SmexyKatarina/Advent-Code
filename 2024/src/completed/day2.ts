@@ -1,4 +1,4 @@
-import { day2Inputs } from "./input";
+import { testData, realData } from "../in-progress/input.ts";
 
 const checkSort = (level: number[], descending?: boolean) => {
     const sorted = descending ? [...level].sort((a, b) => a < b ? -1 : 1).reverse() : [...level].sort((a, b) => a < b ? -1 : 1);
@@ -27,7 +27,7 @@ const isValidLevel = (level: number[]) => {
 }
 const runLevelChecks = () => {
     let safe = 0;
-    day2Inputs.forEach((level) => {
+    realData.forEach((level) => {
         const levelArray = level.split(" ").map(x => parseInt(x));
         if (isValidLevel(levelArray)) {
             safe++;
