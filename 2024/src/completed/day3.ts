@@ -23,9 +23,9 @@ const calculatePart2 = () => {
     return count;
 }
 
-const run = () => {
+const run3 = () => {
     const calc = calculatePart2();
     console.log(`The total is ${calc}`);
 }
 
-run();
+run3();

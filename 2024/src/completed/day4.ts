@@ -1,4 +1,4 @@
-import { testData, day4Inputs, alternateInput } from "./input";
+//import { testData, day4Inputs, alternateInput } from "./input";
 
 const getDirection = (direction: number) => {
     return [
@@ -59,9 +59,9 @@ const part2Execution = (data: string[]) => {
     console.log(count);
 }
 
-const run = () => {
-    part1Execution(alternateInput);
-    part2Execution(alternateInput);
+const run4 = () => {
+    part1Execution([""]);
+    part2Execution([""]);
 }
 
-run();
+run4();

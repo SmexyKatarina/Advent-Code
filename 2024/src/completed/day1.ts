@@ -24,7 +24,7 @@ const distanceBetween = () => {
     console.log(`The combined distance is: ${distance}`);
 }
 
-const run = () => {
+const run1 = () => {
     let { left, right } = createLists();
     let count = 0;
     for (let i = 0; i < left.length; i++) {
@@ -32,4 +32,4 @@ const run = () => {
     }
     console.log(`The similarity count is: ${count}`);
 };
-run();
+run1();

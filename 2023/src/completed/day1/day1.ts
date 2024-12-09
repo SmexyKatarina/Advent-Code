@@ -1,4 +1,6 @@
-import { testInput, day1Input } from "./input";
+//import { testInput, day1Input } from "./input";
+
+const input = [];
 
 const numberParse = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
@@ -22,8 +24,8 @@ const getNumber = (input: string) => {
 
 const run = () => {
     let count = 0;
-    for (let i = 0; i < day1Input.length; i++) {
-        const number = getNumber(day1Input[i]);
+    for (let i = 0; i < input.length; i++) {
+        const number = getNumber(input[i]);
         count += number;
     }
     console.log(`The total is ${count}`);
