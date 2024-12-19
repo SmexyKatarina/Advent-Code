@@ -5,5 +5,4 @@ input.ts
 output
 package.json
 package-lock.json
-in-progress
 tsconfig.json

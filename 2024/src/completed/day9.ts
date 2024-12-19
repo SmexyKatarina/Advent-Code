@@ -101,11 +101,11 @@ const executePart2 = (data: string) => {
 
 const run9 = () => {
     let start = performance.now();
-    console.log(`The sum is: ${executePart1(realData)}`);
+    console.log(`The sum is: ${executePart1("")}`);
     let end = performance.now();
     console.log(`Part 1: ${((end - start) / 1000).toFixed(5)} seconds`);
     start = performance.now();
-    console.log(`The sum is: ${executePart2(realData)}`);
+    console.log(`The sum is: ${executePart2("")}`);
     end = performance.now();
     console.log(`Part 2: ${((end - start) / 1000).toFixed(5)} seconds`);
 }
