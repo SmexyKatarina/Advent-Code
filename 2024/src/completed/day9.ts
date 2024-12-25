@@ -28,16 +28,13 @@ const generateDiskString = (data: string) => {
 
 const generateDiskBlocks = (data: string) => {
     let arr: number[] = [];
-
     for (let i = 0; i < data.length; i++) {
         for (let x = Number(data[i]); x > 0; x--) {
             arr.push(i % 2 === 0 ? i / 2 : -1);
         }
     }
-
     const sorted = [...new Set([...arr].filter(x => x !== -1).reverse())];
     let id = 0;
-
     while (id < sorted.length) {
         let fileLength = arr.filter(x => x === sorted[id]).length;
         let firstIndex = arr.indexOf(sorted[id]);
@@ -61,7 +58,6 @@ const generateDiskBlocks = (data: string) => {
         }
         id++;
     }
-
     return arr;
 }
 
@@ -88,14 +84,11 @@ const executePart1 = (data: string) => {
 
 const executePart2 = (data: string) => {
     const diskArray: number[] = generateDiskBlocks(data);
-    //console.log(diskArray.map(x => x === -1 ? "." : x).join(""));
     let sum = 0;
-
     for (let i = 0; i < diskArray.length; i++) {
         if (diskArray[i] === -1) continue;
         sum += diskArray[i] * i;
     }
-
     return sum;
 }
 
