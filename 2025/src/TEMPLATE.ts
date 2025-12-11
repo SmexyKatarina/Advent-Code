@@ -1,7 +1,8 @@
 import { readFileSync } from 'fs';
 
-const input1 = readFileSync('./inputs/day01-1.txt', 'utf-8').trim();
-const input2 = readFileSync('./inputs/day01-2.txt', 'utf-8').trim();
+const day = "00";
+const input = readFileSync(`src/inputs/day${day}.txt`, 'utf-8').trim();
+const testInput = readFileSync(`src/inputs/day${day}-test.txt`, 'utf-8').trim();
 
 function part1(input: string): number {
     const lines = input.split('\n');
@@ -19,5 +20,7 @@ function part2(input: string): number {
     return 0;
 }
 
-console.log('Part 1:', part1(input1));
-console.log('Part 2:', part2(input2));
+//console.log("Part 1 (Test Input):", part1(testInput));
+//console.log("Part 2 (Test Input):", part2(testInput));
+//console.log('Part 1:', part1(input));
+//console.log('Part 2:', part2(input));

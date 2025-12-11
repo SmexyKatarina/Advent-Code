@@ -6,3 +6,4 @@ output
 package.json
 package-lock.json
 tsconfig.json
+inputs/
