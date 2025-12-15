@@ -96,6 +96,7 @@ In this example, the dial points at 0 three times at the end of a rotation, plus
 */
 
 function part1(input: string): number {
+    console.time("Part 1 Process Time");
     const lines = input.split('\n');
 
     let currentPosition = 50;
@@ -106,11 +107,12 @@ function part1(input: string): number {
         if (currentPosition === 0) zeros++;
         currentPosition = modulo(negative ? currentPosition - amt : currentPosition + amt, 100)[0];
     }
-
+    console.timeEnd("Part 1 Process Time");
     return zeros;
 }
 
 function part2(input: string): number {
+    console.time("Part 2 Process Time");
     const lines = input.split('\n');
     
     let currentPosition = 50;
@@ -136,7 +138,7 @@ function part2(input: string): number {
         currentPosition = modulo(isLeft ? currentPosition - amt : currentPosition + amt, 100)[0];
         zeros += timesPassingZero;
     }
-
+    console.timeEnd("Part 2 Process Time");
     return zeros;
 }
 
