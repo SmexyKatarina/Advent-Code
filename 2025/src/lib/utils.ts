@@ -9,3 +9,11 @@ export function modulo(x: number, mod: number): [number, number] {
     }
     return [x, count];
 }
+
+export function isUniqueArray(array: any[]): boolean {
+    return [...new Set(array)].length === array.length;
+}
+
+export function getUniqueArray(array: any[]): any[] {
+    return [...new Set(array)];
+}
