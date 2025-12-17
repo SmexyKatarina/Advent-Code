@@ -41,12 +41,36 @@ function part2(input: string): number {
 
     let sum = 0;
 
+    for (const pack of packs) {
+        const batteries: Battery[] = [];
+        for (let remaining = 11; remaining >= 0; remaining--) {
+            // The max index the window can search to, exclusive.
+            const maxIndex = pack.length - remaining;
+            // Check if a previous added battery exists
+            const prevBattery = batteries.at(-1);
+            if (12 - batteries.length === remaining) {
+                batteries.push(...pack.slice(prevBattery ? prevBattery.index + 1 : 0));
+                break;
+            }
+            // Make range
+            const [start, end] = prevBattery ? [prevBattery.index + 1, maxIndex - 1] : [0, maxIndex - 1];
+            // Add highest from the range
+            let maxBattery = pack[start];
+            for (let i = start + 1; i <= end; i++) {
+                if (pack[i].joltage > maxBattery.joltage) {
+                    maxBattery = pack[i];
+                }
+            }
+            batteries.push(maxBattery);
+        }
+        sum += parseInt(batteries.map(x => x.joltage.toString()).join(""));
+    }
 
     console.timeEnd("Part 2 Process Time");
-    return 0;
+    return sum;
 }
 
 //console.log("Part 1 (Test Input):", part1(testInput));
-//console.log("Part 2 (Test Input):", part2(testInput));
-console.log('Part 1:', part1(input));
-//console.log('Part 2:', part2(input));
+// console.log("Part 2 (Test Input):", part2(testInput));
+//console.log('Part 1:', part1(input));
+console.log('Part 2:', part2(input));
