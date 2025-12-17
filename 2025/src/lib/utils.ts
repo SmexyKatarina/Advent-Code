@@ -17,3 +17,7 @@ export function isUniqueArray(array: any[]): boolean {
 export function getUniqueArray(array: any[]): any[] {
     return [...new Set(array)];
 }
+
+export function isInRange(num: number, min: number, max: number, exclusive?: boolean) {
+    return exclusive ? num > min && num < max : num >= min && num <= max;
+}
