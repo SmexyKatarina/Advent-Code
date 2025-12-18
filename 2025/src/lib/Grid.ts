@@ -64,6 +64,24 @@ export class Grid {
     }
 
     /**
+     * Get a row in the grid
+     * @param row 0-indexed row of the grid.
+     * @returns The row in the grid
+     */
+    public getRow(row: number): Cell[] {
+        return this._grid[row];
+    }
+    
+    /**
+     * Get a row in the grid
+     * @param row 0-indexed row of the grid.
+     * @returns The row in the grid
+     */
+    public getColumn(column: number): Cell[] {
+        return this._grid.map(x => x[column]);
+    }
+
+    /**
      * Set a `Cell`'s value
      * @param row 0-indexed row of the `Cell` to change
      * @param col 0-indexed column of the `Cell` to change
@@ -148,6 +166,14 @@ export class Grid {
     public getGrid(): Cell[][] {
         return this._grid;
     }
+
+    /**
+     * Returns the grid, flatten to a single array
+     * @returns The flattened version of the grid cells
+     */
+    public getFlatGrid(): Cell[] {
+        return this._grid.flat();
+    } 
 
     /**
      * Get the width of the grid
